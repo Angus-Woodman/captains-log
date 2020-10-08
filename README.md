@@ -9,11 +9,12 @@ Cloning this repo:
 2. run:
    - pipenv install -r requirements.txt
    - npm install
-3. open up a second terminal in the same directory for running the client side
-4. in both terminals 
-   - open up shell with: pipenv shell
-   - cd into captains_log
-5. run backend server with in one teminal with:
-   - python manage.py runserver
-6. run client in the other terminal with:
+3. open up a second terminal in the same directory for running the client side and run:
    - npm run dev
+4. open up shell in the original terminal with: 
+   - pipenv shell 
+   - cd into captains_log
+5. run server with:
+   - python manage.py runserver
+6. open up application at: http://127.0.0.1:8000/
+
