@@ -18,3 +18,14 @@ Cloning this repo:
    - python manage.py runserver
 6. open up application at: http://127.0.0.1:8000/
 
+
+![CaptainsLog](https://res.cloudinary.com/dljcc3hfa/image/upload/v1606142861/CaptainsLog-Dashboard_ojoh9b.png)
+
+![CaptainsLog](https://res.cloudinary.com/dljcc3hfa/image/upload/v1606142861/CaptainsLog-register_ujge3p.png)
+
+![CaptainsLog](https://res.cloudinary.com/dljcc3hfa/image/upload/v1606142859/CaptainsLog-teamSheet_p17h0j.png)
+
+![CaptainsLog](https://res.cloudinary.com/dljcc3hfa/image/upload/v1606142859/CaptainsLog-addPlayer_whovyp.png)
+
+![CaptainsLog](https://res.cloudinary.com/dljcc3hfa/image/upload/v1606142859/CaptainsLog-matchReport_urcpji.png)
+
