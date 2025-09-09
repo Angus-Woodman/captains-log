@@ -35,6 +35,9 @@ body{
     position: absolute;
     left: 0;
     opacity: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
   .btn-default:hover {
