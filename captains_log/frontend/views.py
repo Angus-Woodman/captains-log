@@ -3,9 +3,6 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, HttpResponseNotFound
 import io
 from django.http import FileResponse
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter, landscape
-from reportlab.lib.pagesizes import A4
 import textwrap
 
 
