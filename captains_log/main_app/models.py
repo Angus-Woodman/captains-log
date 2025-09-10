@@ -5,9 +5,9 @@ from django.contrib.auth.models import User
 class Players(models.Model):
     firstname = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
-    email = models.CharField(max_length=70)
+    email = models.CharField(max_length=70, blank=True, null=True)
     owner = models.ForeignKey(User, related_name="players", on_delete=models.CASCADE, null=True)
-    player_notes = models.CharField(max_length=1000, null=True)
+    player_notes = models.CharField(max_length=1000, null=True, blank=True)
 
 class TeamInfo(models.Model):
     owner = models.ForeignKey(User, related_name="teams", on_delete=models.CASCADE, null=True)
