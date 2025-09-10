@@ -4,8 +4,8 @@
   "description": "### Collaborators [@JamieSear](https://github.com/JamieSear), [@atheermusa](https://github.com/atheermusa), [@Angus-Woodman](https://github.com/Angus-Woodman)",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./captains_log/frontend/src/index.js --output ./captains_log/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./captains_log/frontend/src/index.js --output ./captains_log/frontend/static/frontend/main.js"
+    "dev": "webpack",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -19,30 +19,31 @@
   },
   "homepage": "https://github.com/JamieSear/captains-log#readme",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "css-loader": "^4.3.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "@babel/core": "^7.23.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.11.0",
+    "sass": "^1.92.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.87.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "@redux-devtools/extension": "^3.3.0",
+    "axios": "^1.11.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^17.0.2",
     "react-alert": "^7.0.2",
     "react-alert-template-basic": "^1.0.0",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.1",
-    "react-router-dom": "^5.2.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.9",
+    "react-router-dom": "^6.14.2",
     "react-transition-group": "^4.4.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2"
   }
 }

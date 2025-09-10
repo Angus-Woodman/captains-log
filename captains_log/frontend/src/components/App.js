@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import {} from "react-router-dom";
-import { HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
@@ -22,19 +21,19 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth';
 
-//Alert Options
+// Alert Options
 const alertOptions = {
     timeout: 3000,
     position: 'top center',
-}
-
+};
 
 class App extends Component {
     componentDidMount(){
         store.dispatch(loadUser());
     }
+
     render() {
-        return(
+        return (
             <Provider store={store}>
                 <AlertProvider template={AlertTemplate} {...alertOptions}>
                     <Router>
@@ -42,15 +41,28 @@ class App extends Component {
                             <Header />
                             <Alerts />
                             <div className="container">
-                                <Switch>
-                                <PrivateRoute exact path="/" component={Dashboard} />
-                                <PrivateRoute exact path="/teambuilder" component={TeamSheetContainer} />
-                                <PrivateRoute exact path="/players" component={PlayersPage} />
-                                <PrivateRoute exact path="/reports" component={ReportsPage} />
-                                <Route exact path="/register" component={Register} />
-                                <Route exact path="/login" component={Login} />
-                                <Route exact path="/home" component={Homepage} />
-                                </Switch>
+                                <Routes>
+                                    <Route 
+                                        path="/" 
+                                        element={<PrivateRoute><Dashboard /></PrivateRoute>} 
+                                    />
+                                    <Route 
+                                        path="/teambuilder" 
+                                        element={<PrivateRoute><TeamSheetContainer /></PrivateRoute>} 
+                                    />
+                                    <Route 
+                                        path="/players" 
+                                        element={<PrivateRoute><PlayersPage /></PrivateRoute>} 
+                                    />
+                                    <Route 
+                                        path="/reports" 
+                                        element={<PrivateRoute><ReportsPage /></PrivateRoute>} 
+                                    />
+                                    <Route path="/register" element={<Register />} />
+                                    <Route path="/login" element={<Login />} />
+                                    <Route path="/home" element={<Homepage />} />
+                                    <Route path="*" element={<Navigate to="/" replace />} />
+                                </Routes>
                             </div>
                         </Fragment>
                     </Router>
